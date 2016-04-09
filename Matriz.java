@@ -59,7 +59,7 @@ public class Matriz {
                 try{
                     //System.out.println(i+","+j);
                     //System.out.println(pos[0]+","+pos[1]+"/ "+ posicion[0]+" "+posicion[1]);
-                    if (universo[i][j].vida() && universo[i][j] != celula ){
+                    if (universo[i][j].vida() &&(i < size && j < size) &&(i >= 0 && j >= 0) && universo[i][j] != celula ){
 
                         contador++;
                     }}catch (Exception e){

@@ -4,6 +4,7 @@
 public class Celula {
     private int viva;
     private int[] posicion;
+    private int vecindad;
 
 
     public Celula(int[] pos) {
@@ -21,6 +22,13 @@ public class Celula {
    }
 
 
+    public int getVecindad() {
+        return vecindad;
+    }
+
+    public void setVecindad(int vecindad) {
+        this.vecindad = vecindad;
+    }
 
     public void sobrevive(){
         if (this.vida()){

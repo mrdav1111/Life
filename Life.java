@@ -20,16 +20,22 @@ public class Life {
     }
     //Aplica las reglas del juego y genera las diferentes generaciones
     public void evolucion(){
-        System.out.println("Generacion 1");
+        System.out.println("Generacion: 1");
         espacio.imprimir();
 
         for (int i = 2; i <= generaciones; i++) {
 
             Matriz proximaGeneracion = espacio;
 
+            for (Celula[] fila: espacio.getUniverso()){
+                for (Celula celula :fila){
+                    celula.setVecindad(espacio.vecindad(celula));
+                }
+            }
+
             for (Celula[] fila: proximaGeneracion.getUniverso()){
                 for (Celula celula :fila){
-                    int vecinos = espacio.vecindad(celula);
+                    int vecinos = celula.getVecindad();
                     if (vecinos== 3){
                         celula.nace();
                     } else if (vecinos < 2 || vecinos > 3){

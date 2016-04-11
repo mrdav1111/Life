@@ -1,3 +1,4 @@
 # Life
 
-Version Beta.02 del juego de la vida
+Version Beta.03 del juego de la vida
+Privacidad de variables

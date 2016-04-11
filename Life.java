@@ -2,9 +2,9 @@
  * Created by AngelDavid on 3/4/2016.
  */
 public class Life {
-    Matriz espacio;
-    int matrizSize;
-    int generaciones;
+    private Matriz espacio;
+    private int matrizSize;
+    private int generaciones;
 
 //Contructor, crea el espacio y puebla la matriz con n celulas vivas en posiciones al azar
     public Life(int matriz,int celulas, int generaciones) {
